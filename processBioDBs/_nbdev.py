@@ -2,9 +2,12 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"getSequence": "01_Utilities.ipynb"}
+index = {"getSequence": "01_Utilities.ipynb",
+         "batch_converter": "03_Get_Embedding.ipynb",
+         "getSequenceRepresentation": "03_Get_Embedding.ipynb"}
 
-modules = ["utilities.py"]
+modules = ["utilities.py",
+           "embedding.py"]
 
 doc_url = "https://Dzeiberg.github.io/processBioDBs/"
 
