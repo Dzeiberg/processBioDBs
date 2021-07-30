@@ -66,6 +66,12 @@ def getRep(rep,L,originalWindow=510, W=3):
 
 
 def prepSeq(representationMatrix, locationOfVariant, originalWindowSize=510, windowSizes=2**np.arange(1,9)):
+    """
+    Arguments:
+    - representationMatrix : (nCharacters, 1280)
+    - locationOfVariant (0-index)
+
+    """
     windowVectors= []
     for w in windowSizes:
         # get the windowed subset of the matrix and take the mean across all character positions
