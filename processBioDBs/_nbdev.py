@@ -4,7 +4,10 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"getSequence": "01_Utilities.ipynb",
          "batch_converter": "03_Get_Embedding.ipynb",
-         "getSequenceRepresentation": "03_Get_Embedding.ipynb"}
+         "model": "03_Get_Embedding.ipynb",
+         "getSequenceRepresentation": "03_Get_Embedding.ipynb",
+         "getRep": "08_Generate_Matrices.ipynb",
+         "prepSeq": "08_Generate_Matrices.ipynb"}
 
 modules = ["utilities.py",
            "embedding.py"]

@@ -13,7 +13,7 @@ from tqdm.notebook import tqdm,trange
 model, alphabet = esm.pretrained.esm1b_t33_650M_UR50S()
 batch_converter = alphabet.get_batch_converter()
 
-model = model.to("cuda")
+model = model.to("cuda:1")
 
 # Cell
 def getSequenceRepresentation(Data):
@@ -24,7 +24,7 @@ def getSequenceRepresentation(Data):
     - Data : list[(id, sequence),]
     """
     batch_labels, batch_strs, batch_tokens = batch_converter(Data)
-    batch_tokens = batch_tokens.to("cuda")
+    batch_tokens = batch_tokens.to("cuda:1")
     # Extract per-residue representations (on CPU)
     with torch.no_grad():
         results = model(batch_tokens, repr_layers=[33], return_contacts=True)
